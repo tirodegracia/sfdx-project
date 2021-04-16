@@ -1,4 +1,6 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, wire } from 'lwc';
+import queryAccountsByRevenue from '@salesforce/apex/AccountListControllerLwc.queryAccountsByRevenue';
+
 export default class AccountFinder extends LightningElement {
     annualRevenue = null;
     handleChange(event) {
@@ -7,4 +9,7 @@ export default class AccountFinder extends LightningElement {
     reset() {
         this.annualRevenue = null;
     }
+
+    @wire(queryAccountsByRevenue, { annualRevenue: '$annualRevenue' })
+    accounts;
 }
