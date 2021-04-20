@@ -9,6 +9,10 @@
         <type>CustomTab</type>
     </appMenuItems>
     <appMenuItems>
+        <name>Working_with_Data</name>
+        <type>CustomTab</type>
+    </appMenuItems>
+    <appMenuItems>
         <name>Feed</name>
         <type>StandardAppMenuItem</type>
     </appMenuItems>
